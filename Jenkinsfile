@@ -12,7 +12,7 @@ pipeline{
 		stage('maven'){
 			steps{                
 	            // invoke command to build with maven
-				sh "mvn clean install"
+				bat "mvn clean install"
 			}
 		}
 		
@@ -23,7 +23,7 @@ pipeline{
 		//     }
 		//     steps {                 
 	    //         // start SonarQube Analysis   
-	    //         withSonarQubeEnv('SonarQube') { sh '${scannerHome}/bin/sonar-scanner'}
+	    //         withSonarQubeEnv('SonarQube') { bat '${scannerHome}/bin/sonar-scanner'}
 	            	                 
 		//     }
 		//  }
