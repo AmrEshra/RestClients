@@ -23,7 +23,9 @@ pipeline{
 		    }
 		    steps {                 
 	            // start SonarQube Analysis   
-	            withSonarQubeEnv('SonarQube') { bat '${scannerHome}/bin/sonar-scanner'}
+	            withSonarQubeEnv('SonarQube') { 
+					bat "${scannerHome}/bin/sonar-scanner.bat"
+				}
 	            	                 
 		    }
 		 }
