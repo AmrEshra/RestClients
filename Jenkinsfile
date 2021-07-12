@@ -17,15 +17,15 @@ pipeline{
 		}
 		
 		// start of stage : sonarQube Analysis
-		stage('sonarQubeAnalysis') {
-			environment {
-		        scannerHome = tool 'SonarQubeScanner'
-		    }
-		    steps {                 
-	            // start SonarQube Analysis   
-	            withSonarQubeEnv('SonarQube') { sh '${scannerHome}/bin/sonar-scanner'}
+		// stage('sonarQubeAnalysis') {
+		// 	environment {
+		//         scannerHome = tool 'SonarQubeScanner'
+		//     }
+		//     steps {                 
+	    //         // start SonarQube Analysis   
+	    //         withSonarQubeEnv('SonarQube') { sh '${scannerHome}/bin/sonar-scanner'}
 	            	                 
-		    }
-		 }
+		//     }
+		//  }
 	}
 }
